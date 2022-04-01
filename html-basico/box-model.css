@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+div {
+  /* border-width: 1px;
+  border-style: solid;
+  border-color: red; */
+
+  display: inline-block;
+
+  width: 200px;
+  height: 200px;
+
+  border: 10px solid red;
+  margin: 10px;
+  padding: 30px;
+
+  transition: transform 1.5s, border-radius 2s;
+}
+
+div:hover {
+  transform: rotate(40deg);
+  border-radius: 50%;
+}

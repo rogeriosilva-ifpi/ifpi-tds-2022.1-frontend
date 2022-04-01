@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #1565c0;
+}
+
+h2 {
+  color: brown;
+}
+
+#lista_paises {
+  background-color: #b2ebf2;
+  list-style: square;
+}
+
+.paises_item {
+  font-weight: 900;
+}
+
+.paises_item a {
+  text-decoration: none;
+  color: black;
+}
+
+.paises_item a:hover {
+  font-style: italic;
+  background: white;
+  cursor: move;
+}
+
+input {
+  border: 1px solid gray;
+}
+
+input[type="password"],
+input[type="email"] {
+  color: red;
+  margin-top: 10px;
+}
+
+.btn {
+  background: #b2ebf2;
+  padding: 2px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn[type="submit"] {
+  font-weight: bold;
+}
