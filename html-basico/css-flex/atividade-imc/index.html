@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="estilos.css">
+    <script src="comportamento.js" defer></script>
+    
     <title>IMC</title>
 </head>
 <body>
@@ -18,9 +20,40 @@
             <h1>Calculadora IMC</h1>
         </header>
         <main>
-            <section id="left">Left</section>
+            <section id="left">
+                <div id="dados">
+                    <img src="images/avatar_female.png"/>
+                    <p>ROSEMARY</p>
+                    <p>FEMININO</p>
+                    <p id="show_imc">IMC --</p>
+                    <p id="show_classificacao">--</p>
+                </div>
+                <div id="formulario">
+                    <form action="#">
+                        <h2>Calcule seu IMC</h2>
+                        <div id="botoes_sexo">
+                            <button>M</button>
+                            <button class="selecionado">F</button>
+                        </div>
+                        <div class="input_controls">
+                            <label for="nome">Nome</label>
+                            <input id="nome" type="text" />
+                        </div>
+                        <div class="input_controls">
+                            <label for="altura">Altura (m)</label>
+                            <input id="altura" type="text" />
+                        </div>
+                        <div class="input_controls">
+                            <label for="peso">Peso (kg)</label>
+                            <input id="peso" type="text"/>
+                        </div>
+                        <button id="btn_calcular">CALCULAR IMC</button>
+                        <button id="btn_limpar">LIMPAR</button>
+                    </form>
+                </div>
+            </section>
             <section id="right">
-                <h2>Registros</h2>
+                <h2>Registros de Avaliação</h2>
                 <div id="itens">
                     <table>
                         <thead>
@@ -77,6 +110,6 @@
             <p>Rogério Silva @ 2022</p>
         </footer>
     </div>
-    
+
 </body>
 </html>
