@@ -126,7 +126,7 @@ button{
 #botoes_sexo button{
     width: 40%;
     font-size: 1.2rem;
-    
+    cursor: pointer;
 }
 
 #botoes_sexo .selecionado{

@@ -23,8 +23,8 @@
             <section id="left">
                 <div id="dados">
                     <img src="images/avatar_female.png"/>
-                    <p>ROSEMARY</p>
-                    <p>FEMININO</p>
+                    <p id="show_nome">--</p>
+                    <p id="show_sexo">--</p>
                     <p id="show_imc">IMC --</p>
                     <p id="show_classificacao">--</p>
                 </div>
@@ -32,20 +32,20 @@
                     <form action="#">
                         <h2>Calcule seu IMC</h2>
                         <div id="botoes_sexo">
-                            <button>M</button>
-                            <button class="selecionado">F</button>
+                            <button id="sexo_m">M</button>
+                            <button id="sexo_f">F</button>
                         </div>
                         <div class="input_controls">
                             <label for="nome">Nome</label>
-                            <input id="nome" type="text" />
-                        </div>
-                        <div class="input_controls">
-                            <label for="altura">Altura (m)</label>
-                            <input id="altura" type="text" />
+                            <input id="nome" type="text" autocomplete="off" />
                         </div>
                         <div class="input_controls">
                             <label for="peso">Peso (kg)</label>
-                            <input id="peso" type="text"/>
+                            <input id="peso" type="text" autocomplete="off"/>
+                        </div>
+                        <div class="input_controls">
+                            <label for="altura">Altura (m)</label>
+                            <input id="altura" type="text" autocomplete="off"/>
                         </div>
                         <button id="btn_calcular">CALCULAR IMC</button>
                         <button id="btn_limpar">LIMPAR</button>
@@ -64,39 +64,8 @@
                                 <th>AÇÕES</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Rogério</td>
-                                <td>36,2</td>
-                                <td>Obesidade II</td>
-                                <td>
-                                    <a href="#">Remover</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Rogério</td>
-                                <td>36,2</td>
-                                <td>Obesidade II</td>
-                                <td>
-                                    <a href="#">Remover</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Rogério</td>
-                                <td>36,2</td>
-                                <td>Obesidade II</td>
-                                <td>
-                                    <a href="#">Remover</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Rogério</td>
-                                <td>36,2</td>
-                                <td>Obesidade II</td>
-                                <td>
-                                    <a href="#">Remover</a>
-                                </td>
-                            </tr>
+                        <tbody id="corpo_tabela">
+
                         </tbody>
                     </table>
                 </div>
