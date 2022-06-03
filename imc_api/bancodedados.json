@@ -1,0 +1,11 @@
+{
+    "avaliacoes": [
+        {
+            "id": 1,
+            "nome": "Rogério da Silva",
+            "imc": 36.2,
+            "classificacao": "Obesidade II"
+        }
+    ]
+}
+
