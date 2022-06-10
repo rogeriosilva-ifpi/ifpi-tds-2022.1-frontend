@@ -32,6 +32,8 @@ function app(){
         show_classificacao.innerText = classificacao
         show_sexo.innerText = sexo
 
+        salvar_avaliacao(nome, imc, classificacao)
+
         adicionar_avaliacao_tabela(nome, imc, classificacao)
         
     }    
@@ -92,20 +94,38 @@ function adicionar_avaliacao_tabela(nome, imc, classificacao){
     corpo_tabela.appendChild(linha)
 }
 
-function carregar_avaliacoes(){
+async function carregar_avaliacoes(){
     console.log('Carregando avaliações')
     
     // Chamada na API Backend
-    fetch('http://localhost:3000/avaliacoes')
-        .then(response => response.json())
-        .then(json => {
-            const nome = json[0].nome
-            const imc = json[0].imc
-            const classificacao = json[0].classificacao
+    const response = await fetch('http://localhost:3000/avaliacoes')
+    const avaliacoes = await response.json()
+    
+    for (let avaliacao of avaliacoes){
+        const nome = avaliacao.nome
+        const imc = avaliacao.imc
+        const classificacao = avaliacao.classificacao
 
-            adicionar_avaliacao_tabela(nome, imc, classificacao)
-        })
-        .catch(error => console.error(error))
+        adicionar_avaliacao_tabela(nome, imc, classificacao)
+    }
+
+}
+
+async function salvar_avaliacao(nome, imc, classificacao){
+    console.log('Enviando Avaliacao para a API')
+
+    const avaliacao = {nome, imc, classificacao}    
+
+    const init = {
+        method: 'POST',
+        body: JSON.stringify(avaliacao),
+        headers: {"Content-type": "application/json; charset=UTF-8"}
+    }
+    
+    // Chamada na API Backend
+    await fetch('http://localhost:3000/avaliacoes', init)
+    
+    adicionar_avaliacao_tabela(nome, imc, classificacao)
 }
 
 

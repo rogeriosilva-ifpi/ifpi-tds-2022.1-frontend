@@ -1,11 +1,28 @@
 {
-    "avaliacoes": [
-        {
-            "id": 1,
-            "nome": "Rogério da Silva",
-            "imc": 36.2,
-            "classificacao": "Obesidade II"
-        }
-    ]
+  "avaliacoes": [
+    {
+      "id": 1,
+      "nome": "Rogério da Silva",
+      "imc": 36.2,
+      "classificacao": "Obesidade II"
+    },
+    {
+      "id": 2,
+      "nome": "Moacir Jr. Arquiteto",
+      "imc": 23.8,
+      "classificacao": "Peso Normal"
+    },
+    {
+      "id": 3,
+      "nome": "ALcione Oliveira",
+      "imc": 29.2,
+      "classificacao": "Sobrepeso"
+    },
+    {
+      "nome": "Antonio José",
+      "imc": 32,
+      "classificacao": "Obesidade I",
+      "id": 4
+    }
+  ]
 }
-
